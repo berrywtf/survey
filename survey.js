@@ -2,7 +2,7 @@ $(document).ready(function() {
     $(":input, a").attr("tabindex", "-1");
     
     /******Step 1: Alias (Name) *******************/
-    $('#userNameBox').keypress(function(event) {
+    $('#name-input').keypress(function(event) {
         if (event.keyCode == 13) {
             event.preventDefault();
         }
@@ -10,7 +10,7 @@ $(document).ready(function() {
     
     $('#name-step').click(function(e) {
         e.preventDefault();
-        if ($('#userNameBox').val().length != 0) {
+        if ($('#name-input').val().length != 0) {
             $('#name-alert').hide();
             $('.w-round div:nth-child(2)').trigger('tap');
         } else {
